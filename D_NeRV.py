@@ -137,11 +137,11 @@ class D_NeRV(nn.Module):
 
 		ngf_a = int(int(int(self.c2_dim/self.r_c)/self.r_c)/self.r_c)
 
-		self.p_c = nn.Conv2d(ngf_a, ngf_a, kernel_size=1, stride=1, padding=1)
-		self.p_d = nn.Conv2d(ngf_a, ngf_a, kernel_size=1, stride=1, padding=1)
+		self.p_c = nn.Conv2d(ngf_a, ngf_a, kernel_size=3, stride=1, padding=1)
+		self.p_d = nn.Conv2d(ngf_a, ngf_a, kernel_size=3, stride=1, padding=1)
 
-		self.s_c = nn.Conv2d(ngf_a, ngf_a, kernel_size=1, stride=1, padding=1)
-		self.s_d = nn.Conv2d(ngf_a, ngf_a, kernel_size=1, stride=1, padding=1)
+		self.s_c = nn.Conv2d(ngf_a, ngf_a, kernel_size=3, stride=1, padding=1)
+		self.s_d = nn.Conv2d(ngf_a, ngf_a, kernel_size=3, stride=1, padding=1)
 
 	'''data = {
 		"img_id": frame_idx,
