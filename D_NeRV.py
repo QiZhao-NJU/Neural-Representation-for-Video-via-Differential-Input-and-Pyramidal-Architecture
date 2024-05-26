@@ -89,9 +89,9 @@ class D_NeRV(nn.Module):
 
 		for k, stride in enumerate(self.cont_enc_list):
 			if k == 0:
-					c0 = 3
+			        c0 = 3
 			else:
-				c0 = self.c1_dim
+			        c0 = self.c1_dim
 
 			self.cont_enc_layers.append(nn.Conv2d(c0, self.c1_dim, kernel_size=self.cont_enc_list[k],
 					stride=self.cont_enc_list[k]))
